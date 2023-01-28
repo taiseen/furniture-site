@@ -36,3 +36,30 @@ yarn dev
 * File & Folder Structure
 * CSS writing structure
 * Responsive Mobile Menu
+
+* these - tailwind classes - implementation...
+```
+scroll-smooth 
+scroll-pt-6
+
+backdrop-blur-md
+
+odd:border-r 
+lg:odd:border-r 
+lg:even:border-r 
+lg:even:last:border-none
+
+order-1 lg:-order-1
+
+lg:last:mb-0
+
+lg:absolute lg:-right-24
+
+flex flex-col lg:flex-row lg:gap-x-[100px]
+```
+
+
+
+<!-- 
+https://app.netlify.com/sites/furniture-lp/deploys
+ -->
