@@ -1,13 +1,18 @@
+import { useClickOutside } from '../util/useClickOutside';
 import { CgMenuRight, CgClose } from 'react-icons/cg';
+import { useState, useEffect, useRef } from 'react';
 import { navigation } from '../constants/data';
-import { useState, useEffect } from 'react';
 import { NavMobile } from '.';
 import Logo from '../assets/img/logo.svg';
 
 const Header = () => {
 
+  const mobileMenuRef = useRef(null);
+
   const [bg, setBg] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
+
+  useClickOutside(mobileMenuRef, setMobileNav);
 
   useEffect(() => {
     // add event listener
@@ -27,7 +32,7 @@ const Header = () => {
         }`}>
 
         <div className='container mx-auto'>
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center' >
 
             {/* logo */}
             <a href='#home'>
@@ -65,8 +70,7 @@ const Header = () => {
               {
                 mobileNav
                   ? <CgClose className='text-red-600' />
-                  : <CgMenuRight className={`${bg ? 'text-black' : 'text-white'}`}
-                  />
+                  : <CgMenuRight className={`${bg ? 'text-black' : 'text-white'}`} />
               }
             </div>
 
@@ -77,12 +81,13 @@ const Header = () => {
 
 
       {/* 📳📳📳 Mobile - Navigation Menu 📳📳📳 */}
-      <div
+      <div ref={mobileMenuRef}
         className={`md:hidden fixed bottom-0 w-full max-w-xs h-screen transition-all z-20
-              ${mobileNav ? 'left-0' : '-left-full'}`}
+              ${mobileNav ? 'left-0' : '-left-full'} `}
       >
         <NavMobile setMobileNav={setMobileNav} />
       </div>
+
 
     </header>
   );

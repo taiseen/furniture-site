@@ -2,11 +2,11 @@
 
 ## Furniture - Static Wep App UI
 
-# React + Tailwind CSS | [Live Link](www)
+# React + Tailwind CSS | [Live Link](https://furniture-lp.netlify.app)
 
 ## This app based on - vite 
 
-after clone or download, for install dependencies, please run at terminal...
+after clone or download, for installing dependencies, please run at terminal...
 ```
 yarn
 ```
@@ -36,7 +36,7 @@ yarn dev
 * File & Folder Structure
 * CSS writing structure
 * Responsive Mobile Menu
-
+* detect outside click & close menu
 * these - tailwind classes - implementation...
 ```
 scroll-smooth 
@@ -57,9 +57,3 @@ lg:absolute lg:-right-24
 
 flex flex-col lg:flex-row lg:gap-x-[100px]
 ```
-
-
-
-<!-- 
-https://app.netlify.com/sites/furniture-lp/deploys
- -->
