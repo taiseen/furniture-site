@@ -31,7 +31,7 @@ const Footer = () => (
       </div>
 
       <p className='text-center'>
-        &copy; FurniShop 2023 - All Rights Reserved by Taiseen.
+        &copy; FurniShop {new Date().getFullYear()} - All Rights Reserved by Taiseen.
       </p>
 
     </div>
